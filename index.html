@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhubaneswar Land Cover Change 2018–2025</title>
+<meta name="description" content="Dynamic World land-cover change in Bhubaneswar, 2018–2025: year-wise maps, before–after swipe, statistics and discussion.">
+<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="menu-open">
+
+  <div id="map" role="application" aria-label="Bhubaneswar land-cover map"></div>
+
+  <div class="title-pill"><strong>Bhubaneswar</strong> land-cover change<span class="dim"> · Dynamic World, 10 m · Jan–Mar composites</span></div>
+  <div id="yearBadge" class="year-badge" aria-live="polite"></div>
+
+  <!-- hamburger -->
+  <button id="menuBtn" class="menu-btn" aria-controls="panel" aria-expanded="true" title="Show / hide menu">
+    <span></span><span></span><span></span><b class="sr">Menu</b>
+  </button>
+
+  <!-- left panel (as in the sketch) -->
+  <nav id="panel" class="panel" aria-label="Map layers">
+    <section>
+      <h2>Year</h2>
+      <ul id="yearList" class="checks"></ul>
+      <div class="row">
+        <button id="playBtn" class="chip" type="button">▶ Play</button>
+        <a class="chip" href="data/bhubaneswar_dynamicworld.gif" target="_blank" rel="noopener">Animated GIF</a>
+      </div>
+      <p class="hint">Tick one year to view it. Tick two years to compare them with a swipe.</p>
+    </section>
+
+    <section>
+      <h2>Change <span id="changeSpan"></span></h2>
+      <ul id="changeList" class="checks"></ul>
+    </section>
+
+    <section>
+      <h2>Map</h2>
+      <label class="check"><input type="checkbox" id="boundaryChk" checked><span class="sw line"></span><span>City boundary</span></label>
+      <div class="radios" role="radiogroup" aria-label="Basemap">
+        <label><input type="radio" name="base" value="street" checked> Street</label>
+        <label><input type="radio" name="base" value="sat"> Satellite</label>
+        <label><input type="radio" name="base" value="plain"> Plain</label>
+      </div>
+      <label class="slider"><span>Layer opacity</span><input type="range" id="opacity" min="30" max="100" value="90"></label>
+    </section>
+
+    <section class="disc">
+      <label class="check big"><input type="checkbox" id="discChk"><span>Discussion &amp; statistics</span></label>
+    </section>
+  </nav>
+
+  <!-- swipe divider (shown when two years are ticked) -->
+  <div id="swipe" class="swipe" hidden>
+    <div class="swipe-line"></div>
+    <div id="swipeHandle" class="swipe-handle" role="slider" tabindex="0"
+         aria-label="Before–after divider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+      <span id="swipeL" class="tag l"></span><i>⇆</i><span id="swipeR" class="tag r"></span>
+    </div>
+  </div>
+
+  <!-- discussion + statistics drawer -->
+  <aside id="drawer" class="drawer" hidden aria-label="Discussion and statistics">
+    <header>
+      <h2>Discussion &amp; statistics</h2>
+      <button id="drawerClose" class="x" type="button" aria-label="Close">×</button>
+    </header>
+    <div id="drawerBody" class="drawer-body"></div>
+  </aside>
+
+  <div id="error" class="error" hidden></div>
+</div>
+
+<script src="lib/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
