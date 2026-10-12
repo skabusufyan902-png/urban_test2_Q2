@@ -1,0 +1,245 @@
+{
+ "meta": {
+  "city": "Bhubaneswar",
+  "source": "GOOGLE/DYNAMICWORLD/V1",
+  "season": "Jan–Mar",
+  "cloud_max": 30,
+  "resolution_m": 10,
+  "city_km2": 162.654,
+  "ring_radii_m": [
+   3000,
+   6000
+  ]
+ },
+ "years": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "scenes": {
+  "2018": 14,
+  "2019": 17,
+  "2020": 13,
+  "2021": 14,
+  "2022": 17,
+  "2023": 15,
+  "2024": 13,
+  "2025": 17
+ },
+ "area": {
+  "2018": {
+   "Water": 1.7875,
+   "Trees": 29.2765,
+   "Grass": 0.4822,
+   "Flooded veg.": 0.0763,
+   "Crops": 17.8414,
+   "Shrub & scrub": 8.1797,
+   "Built": 102.8677,
+   "Bare": 1.6752,
+   "Snow/ice": 0
+  },
+  "2019": {
+   "Water": 1.8728,
+   "Trees": 25.9475,
+   "Grass": 0.5628,
+   "Flooded veg.": 0.0328,
+   "Crops": 17.2732,
+   "Shrub & scrub": 7.3902,
+   "Built": 107.224,
+   "Bare": 1.8833,
+   "Snow/ice": 0
+  },
+  "2020": {
+   "Water": 2.0236,
+   "Trees": 24.5111,
+   "Grass": 1.559,
+   "Flooded veg.": 0.0893,
+   "Crops": 11.0483,
+   "Shrub & scrub": 8.3895,
+   "Built": 112.8276,
+   "Bare": 1.738,
+   "Snow/ice": 0
+  },
+  "2021": {
+   "Water": 2.133,
+   "Trees": 24.3927,
+   "Grass": 0.738,
+   "Flooded veg.": 0.06,
+   "Crops": 15.3174,
+   "Shrub & scrub": 7.844,
+   "Built": 109.8524,
+   "Bare": 1.8491,
+   "Snow/ice": 0
+  },
+  "2022": {
+   "Water": 2.1143,
+   "Trees": 28.087,
+   "Grass": 2.031,
+   "Flooded veg.": 0.2122,
+   "Crops": 9.061,
+   "Shrub & scrub": 6.6048,
+   "Built": 112.5167,
+   "Bare": 1.5594,
+   "Snow/ice": 0
+  },
+  "2023": {
+   "Water": 2.1287,
+   "Trees": 22.9172,
+   "Grass": 0.6655,
+   "Flooded veg.": 0.1254,
+   "Crops": 13.0736,
+   "Shrub & scrub": 7.1458,
+   "Built": 114.5263,
+   "Bare": 1.6039,
+   "Snow/ice": 0
+  },
+  "2024": {
+   "Water": 2.453,
+   "Trees": 22.8125,
+   "Grass": 0.4374,
+   "Flooded veg.": 0.1159,
+   "Crops": 8.8135,
+   "Shrub & scrub": 6.8617,
+   "Built": 118.4166,
+   "Bare": 2.276,
+   "Snow/ice": 0
+  },
+  "2025": {
+   "Water": 2.2857,
+   "Trees": 33.8861,
+   "Grass": 1.0779,
+   "Flooded veg.": 0.0577,
+   "Crops": 7.197,
+   "Shrub & scrub": 4.0484,
+   "Built": 111.6894,
+   "Bare": 1.9442,
+   "Snow/ice": 0
+  }
+ },
+ "change": {
+  "built": {
+   "gain": 12.2883,
+   "loss": 3.4666
+  },
+  "trees": {
+   "gain": 11.9058,
+   "loss": 7.2961
+  }
+ },
+ "transitions": {
+  "trees_to": {
+   "Water": 0.124,
+   "Grass": 0.2625,
+   "Crops": 0.8192,
+   "Shrub & scrub": 0.3536,
+   "Built": 5.7258,
+   "Bare": 0.011
+  },
+  "to_built": {
+   "Water": 0.0789,
+   "Trees": 5.7258,
+   "Grass": 0.0937,
+   "Crops": 4.6914,
+   "Shrub & scrub": 1.689,
+   "Bare": 0.0096
+  }
+ },
+ "zones": {
+  "quadrants": {
+   "North-West": {
+    "area": 28.4841,
+    "built_2018": 16.4745,
+    "built_2025": 18.2276,
+    "built_gain": 2.1215,
+    "built_loss": 0.3684,
+    "tree_gain": 1.1149,
+    "tree_loss": 1.2771,
+    "trees_2018": 9.4759,
+    "trees_2025": 9.3137
+   },
+   "North-East": {
+    "area": 50.6309,
+    "built_2018": 29.6061,
+    "built_2025": 33.2709,
+    "built_gain": 5.1501,
+    "built_loss": 1.4853,
+    "tree_gain": 4.949,
+    "tree_loss": 2.7884,
+    "trees_2018": 8.4579,
+    "trees_2025": 10.6185
+   },
+   "South-West": {
+    "area": 51.035,
+    "built_2018": 31.2993,
+    "built_2025": 33.533,
+    "built_gain": 3.3896,
+    "built_loss": 1.1558,
+    "tree_gain": 4.4424,
+    "tree_loss": 2.0406,
+    "trees_2018": 7.9974,
+    "trees_2025": 10.3992
+   },
+   "South-East": {
+    "area": 32.0359,
+    "built_2018": 25.4872,
+    "built_2025": 26.6573,
+    "built_gain": 1.6271,
+    "built_loss": 0.457,
+    "tree_gain": 1.3995,
+    "tree_loss": 1.19,
+    "trees_2018": 3.3452,
+    "trees_2025": 3.5547
+   }
+  },
+  "rings": {
+   "Core (<3 km)": {
+    "area": 27.8563,
+    "built_2018": 22.3731,
+    "built_2025": 22.5195,
+    "built_gain": 1.0703,
+    "built_loss": 0.9239,
+    "tree_gain": 1.1022,
+    "tree_loss": 0.9559,
+    "trees_2018": 4.5107,
+    "trees_2025": 4.6569
+   },
+   "Middle (3–6 km)": {
+    "area": 77.7638,
+    "built_2018": 52.3263,
+    "built_2025": 56.3819,
+    "built_gain": 5.6155,
+    "built_loss": 1.5598,
+    "tree_gain": 3.9933,
+    "tree_loss": 3.6534,
+    "trees_2018": 15.8444,
+    "trees_2025": 16.1842
+   },
+   "Outer (>6 km)": {
+    "area": 56.5653,
+    "built_2018": 28.1677,
+    "built_2025": 32.7872,
+    "built_gain": 5.6024,
+    "built_loss": 0.9829,
+    "tree_gain": 6.8102,
+    "tree_loss": 2.6867,
+    "trees_2018": 8.9212,
+    "trees_2025": 13.0447
+   }
+  }
+ },
+ "bounds": [
+  [
+   20.211380099999975,
+   85.7322459
+  ],
+  [
+   20.366446700000026,
+   85.9033989
+  ]
+ ]
+}
