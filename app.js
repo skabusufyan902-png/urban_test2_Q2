@@ -33,7 +33,7 @@ async function load() {
     init(stats, boundary);
   } catch (err) {
     showError('<b>Data files not found.</b> This page needs <code>stats.json</code>, <code>boundary.geojson</code> ' +
-      'and <code>*.png/*.png</code>, created by the export cell in the notebook. ' +
+      'and <code>lc_*.png</code>, created by the export cell in the notebook. ' +
       'If you opened <code>index.html</code> by double-clicking it, run <code>python -m http.server</code> in this folder and open ' +
       '<code>http://localhost:8000</code> instead. Browsers block local file loading.');
     console.error(err);
@@ -63,11 +63,11 @@ function init(stats, boundary) {
   let opacity = 0.9;
   const yearLayers = {};
   years.forEach(y => {
-    yearLayers[y] = L.imageOverlay(`*.png/lc_${y}.png`, bounds, { pane: 'years', opacity, alt: `Land cover ${y}`, interactive: false });
+    yearLayers[y] = L.imageOverlay(`lc_${y}.png`, bounds, { pane: 'years', opacity, alt: `Land cover ${y}`, interactive: false });
   });
   const changeLayers = {};
   CHANGE_LAYERS.forEach(c => {
-    changeLayers[c.id] = L.imageOverlay(`*.png/change_${c.id}.png`, bounds, { pane: 'change', opacity, alt: c.label, interactive: false });
+    changeLayers[c.id] = L.imageOverlay(`change_${c.id}.png`, bounds, { pane: 'change', opacity, alt: c.label, interactive: false });
   });
   const boundaryLayer = L.geoJSON(boundary, {
     pane: 'boundary', interactive: false,
