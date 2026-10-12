@@ -28,11 +28,11 @@ async function load() {
   try {
     const [stats, boundary] = await Promise.all([
       fetch('data/stats.json').then(r => { if (!r.ok) throw new Error('stats.json'); return r.json(); }),
-      fetch('data/boundary.geojson').then(r => { if (!r.ok) throw new Error('boundary.geojson'); return r.json(); })
+      fetch('boundary.geojson').then(r => { if (!r.ok) throw new Error('boundary.geojson'); return r.json(); })
     ]);
     init(stats, boundary);
   } catch (err) {
-    showError('<b>Data files not found.</b> This page needs <code>data/stats.json</code>, <code>data/boundary.geojson</code> ' +
+    showError('<b>Data files not found.</b> This page needs <code>data/stats.json</code>, <code>boundary.geojson</code> ' +
       'and <code>data/frames/*.png</code>, created by the export cell in the notebook. ' +
       'If you opened <code>index.html</code> by double-clicking it, run <code>python -m http.server</code> in this folder and open ' +
       '<code>http://localhost:8000</code> instead. Browsers block local file loading.');
@@ -393,7 +393,7 @@ function buildStatsHTML(S, years) {
     <p><b>3. Limitations</b></p>${limits}
     <h3>Data</h3>
     <p class="links"><a href="data/stats.json" target="_blank" rel="noopener">stats.json</a>
-    <a href="data/bhubaneswar_dynamicworld.gif" target="_blank" rel="noopener">Animated GIF</a></p>
+    <a href="bhubaneswar_dynamicworld.gif" target="_blank" rel="noopener">Animated GIF</a></p>
     <p class="note">Source: Google Dynamic World V1 (GOOGLE/DYNAMICWORLD/V1), derived from Sentinel-2. Class = most likely class of the season-mean probabilities.</p>`;
 }
 
